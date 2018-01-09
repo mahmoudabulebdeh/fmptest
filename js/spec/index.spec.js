@@ -64,10 +64,4 @@ describe("prime validator",function () {
         expect(testApp.isPrime(100)).toBe(false);
     });
 
-    it("returns true for a prime input", function() {
-        expect(testApp.isPrime(2)).toBe(true);
-        expect(testApp.isPrime(5)).toBe(true);
-        expect(testApp.isPrime(59)).toBe(true);
-        expect(testApp.isPrime(137)).toBe(true);
-    });
 });
