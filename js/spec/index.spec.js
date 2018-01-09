@@ -16,23 +16,25 @@ var testApp = {
         else{
             return x;
         }
-    },
-    /**
-     * Method to check if an integer value is a prime number
-     * @param n is an integer value
-     * @returns {boolean} true if the passed value is a prime number, false if not prime
-     */
-    isPrime: function(n) {
-        if(n<2)
-            return false;
-        for(x = 2; x<= Math.sqrt(n); x++){
-            if(n%x==0){
-                return false;
-            }
-        }
-        return true;
     }
 };
+
+
+/**
+ * Method to check if an integer value is a prime number
+ * @param n is an integer value
+ * @returns {boolean} true if the passed value is a prime number, false if not prime
+ */
+function isPrime(n) {
+    if(n<2)
+        return false;
+    for(x = 2; x<= Math.sqrt(n); x++){
+        if(n%x==0){
+            return false;
+        }
+    }
+    return true;
+}
 
 /**
  * Method to generate a certain number of prime numbers
@@ -62,21 +64,21 @@ describe("input validation", function() {
 
 describe("prime validator",function () {
     it("should be defined", function() {
-        expect(testApp.isPrime()).toBeDefined;
+        expect(isPrime()).toBeDefined;
     });
 
     it("returns false if not a prime", function() {
-        expect(testApp.isPrime(1)).toBe(false);
-        expect(testApp.isPrime(6)).toBe(false);
-        expect(testApp.isPrime(33)).toBe(false);
-        expect(testApp.isPrime(100)).toBe(false);
+        expect(isPrime(1)).toBe(false);
+        expect(isPrime(6)).toBe(false);
+        expect(isPrime(33)).toBe(false);
+        expect(isPrime(100)).toBe(false);
     });
 
     it("returns true for a prime input", function() {
-        expect(testApp.isPrime(2)).toBe(true);
-        expect(testApp.isPrime(5)).toBe(true);
-        expect(testApp.isPrime(59)).toBe(true);
-        expect(testApp.isPrime(137)).toBe(true);
+        expect(isPrime(2)).toBe(true);
+        expect(isPrime(5)).toBe(true);
+        expect(isPrime(59)).toBe(true);
+        expect(isPrime(137)).toBe(true);
     });
 });
 
@@ -84,5 +86,11 @@ describe("primes generator",function () {
     it("should be defined", function() {
         expect(generatePrimes()).toBeDefined;
     });
+
+    it("should returns n elements",function () {
+        expect(generatePrimes(1).length).toEqual(1);
+        expect(generatePrimes(9).length).toEqual(9);
+        expect(generatePrimes(40).length).toEqual(40);
+    })
 });
 
