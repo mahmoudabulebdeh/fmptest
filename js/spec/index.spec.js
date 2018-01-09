@@ -38,9 +38,17 @@ function isPrime(n) {
 
 /**
  * Method to generate a certain number of prime numbers
+ * @param n is the number of primes to be generated
+ * @returns {Array} an array of n numbers
  */
 function generatePrimes(n) {
-
+    var i=0;
+    var primes = [];
+    while(i<n){
+        primes[i] = 0;
+        i = i+1;
+    }
+    return primes;
 }
 
 describe("input validation", function() {
