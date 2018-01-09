@@ -23,7 +23,13 @@ var testApp = {
      * @returns {boolean} true if the passed value is a prime number, false if not prime
      */
     isPrime: function(n) {
-        return true;
+        if(n<2)
+            return false;
+        for(x = 2; x<= Math.sqrt(n); x++){
+            if(n%x==0){
+                return false;
+            }
+        }
     }
 };
 
@@ -58,4 +64,4 @@ describe("prime validator",function () {
         expect(testApp.isPrime(100)).toBe(false);
     });
 
-})
+});
