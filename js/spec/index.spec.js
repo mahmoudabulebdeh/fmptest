@@ -28,4 +28,8 @@ describe("input validation", function() {
     it("returns -1 if not a number", function() {
         expect(testApp.validateInput("test")).toEqual(-1);
     });
+
+    it("returns -1 if not an integer", function() {
+        expect(testApp.validateInput(2.2)).toEqual(-1);
+    });
 });
