@@ -39,14 +39,18 @@ function isPrime(n) {
 /**
  * Method to generate a certain number of prime numbers
  * @param n is the number of primes to be generated
- * @returns {Array} an array of n numbers
+ * @returns {Array} an array of n prime numbers, starting from 2
  */
 function generatePrimes(n) {
     var i=0;
+    var x=2;
     var primes = [];
     while(i<n){
-        primes[i] = 0;
-        i = i+1;
+        if(isPrime(x)==true){
+            primes[i] = x;
+            i = i+1;
+        }
+        x = x+1;
     }
     return primes;
 }
