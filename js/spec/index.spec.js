@@ -37,3 +37,9 @@ describe("input validation", function() {
         expect(testApp.validateInput(0)).toEqual(-1);
     });
 });
+
+describe("prime validator",function () {
+    it("should be defined", function() {
+        expect(testApp.isPrime()).toBeDefined;
+    });
+})
