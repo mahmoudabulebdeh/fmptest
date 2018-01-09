@@ -50,4 +50,8 @@ describe("prime validator",function () {
     it("should be defined", function() {
         expect(testApp.isPrime()).toBeDefined;
     });
+
+    it("returns false if not a prime", function() {
+        expect(testApp.isPrime()).toBe(false);
+    });
 })
