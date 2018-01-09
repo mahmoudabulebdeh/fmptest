@@ -34,6 +34,13 @@ var testApp = {
     }
 };
 
+/**
+ * Method to generate a certain number of prime numbers
+ */
+function generatePrimes(n) {
+
+}
+
 describe("input validation", function() {
 
     it("should be defined", function() {
