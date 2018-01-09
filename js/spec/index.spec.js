@@ -30,6 +30,7 @@ var testApp = {
                 return false;
             }
         }
+        return true;
     }
 };
 
