@@ -1,8 +1,15 @@
 /**
  * Created by Mahmoud on 09/01/2018.
  */
-describe("A suite", function() {
-    it("contains spec with an expectation", function() {
-        expect(true).toBe(true);
+
+var testApp = {
+
+};
+
+describe("input validation", function() {
+
+    it("should be defined", function() {
+        expect(testApp.validateInput()).toBeDefined;
     });
+
 });
