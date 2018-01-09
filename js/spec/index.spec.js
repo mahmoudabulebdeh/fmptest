@@ -11,7 +11,6 @@ var testApp = {
     validateInput: function(x) {
         return x;
     }
-
 };
 
 describe("input validation", function() {
@@ -20,4 +19,7 @@ describe("input validation", function() {
         expect(testApp.validateInput()).toBeDefined;
     });
 
+    it("returns -1 if not a number", function() {
+        expect(testApp.validateInput("test")).toEqual(-1);
+    });
 });
