@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Find My Past Coding Test</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app/index.js"></script>
+    <script src="js/spec/index.spec.js"></script>
 </head>
 <body>
+    <div class="container">
+        <h3 class="header">
+            This application takes a numeric input (N) from a user and outputs a multiplication table of (N) prime numbers
+        </h3>
 
+        <h3>Please input a whole number N, where is N is at least 1</h3>
+
+        <form>
+            <input type="text" id="numb" name="numb">
+
+            <button type="button" id="submit">Submit</button>
+        </form>
+
+        <div id="output"></div>
+    </div>
 </body>
 </html>
