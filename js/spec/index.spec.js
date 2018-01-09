@@ -20,8 +20,4 @@ describe("input validation", function() {
         expect(testApp.validateInput()).toBeDefined;
     });
 
-    it("returns -1 if not integer", function() {
-        expect(testApp.validateInput("test")).toEqual(-1);
-    });
-
 });
