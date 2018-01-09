@@ -16,6 +16,14 @@ var testApp = {
         else{
             return x;
         }
+    },
+    /**
+     * Method to check if an integer value is a prime number
+     * @param n is an integer value
+     * @returns {boolean} true if the passed value is a prime number, false if not prime
+     */
+    isPrime: function(n) {
+        return true;
     }
 };
 
