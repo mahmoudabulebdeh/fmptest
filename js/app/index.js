@@ -16,7 +16,9 @@ document.getElementById("submit").addEventListener("click", function(){
         var message = "'"+ input +"' is not a valid input! Please Enter an Integer number greater or equal to one.";
         alert(message);
     } else {
-        alert("valid input!");
+        var primes = generatePrimes(input);
+        alert("Thanks for the valid input, " +primes.length+ " primes has been generated!");
+        console.log(primes.toString());
     }
 });
 
