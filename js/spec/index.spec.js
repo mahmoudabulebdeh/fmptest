@@ -99,6 +99,30 @@ describe("primes generator",function () {
         expect(generatePrimes(1).length).toEqual(1);
         expect(generatePrimes(9).length).toEqual(9);
         expect(generatePrimes(40).length).toEqual(40);
-    })
+    });
+
+    it("should returns n primes starting from 2",function () {
+
+        var generatedPrimes1 = generatePrimes(1);
+        expect(generatedPrimes1[0]).toEqual(2);
+
+        var generatedPrimes100 = generatePrimes(100);
+        expect(generatedPrimes100[0]).toEqual(2);
+        for(var i=0; i<generatedPrimes100.length; i++){
+            expect(isPrime(generatedPrimes100[i])).toBe(true);
+        }
+
+        var generatedPrimes700 = generatePrimes(700);
+        expect(generatedPrimes700[0]).toEqual(2);
+        for(var i=0; i<generatedPrimes700.length; i++){
+            expect(isPrime(generatedPrimes700[i])).toBe(true);
+        }
+
+        var generatedPrimes1000= generatePrimes(1000);
+        expect(generatedPrimes1000[0]).toEqual(2);
+        for(var i=0; i<generatedPrimes1000.length; i++){
+            expect(isPrime(generatedPrimes1000[i])).toBe(true);
+        }
+    });
 });
 
