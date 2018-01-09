@@ -72,3 +72,10 @@ describe("prime validator",function () {
         expect(testApp.isPrime(137)).toBe(true);
     });
 });
+
+describe("primes generator",function () {
+    it("should be defined", function() {
+        expect(generatePrimes()).toBeDefined;
+    });
+});
+
