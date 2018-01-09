@@ -9,8 +9,8 @@ var testApp = {
      * @returns the input value if it was an integer value >= 1 (valid) otherwise it returns -1 (invalid)
      */
     validateInput: function(x) {
-        // if x isn't a number
-        if (isNaN(x)){
+        // if x isn't a number or not an Integer value
+        if (isNaN(x) || x % 1 !== 0){
             return -1;
         }
         else{
