@@ -52,6 +52,10 @@ describe("prime validator",function () {
     });
 
     it("returns false if not a prime", function() {
-        expect(testApp.isPrime()).toBe(false);
+        expect(testApp.isPrime(1)).toBe(false);
+        expect(testApp.isPrime(6)).toBe(false);
+        expect(testApp.isPrime(33)).toBe(false);
+        expect(testApp.isPrime(100)).toBe(false);
     });
+
 })
