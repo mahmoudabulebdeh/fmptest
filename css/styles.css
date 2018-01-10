@@ -2,14 +2,13 @@
 body {
     margin: 0;
     padding: 0;
-    font-size: xx-large;
+    font-size: large;
     font-family: Arial;
 }
 
 .container {
     position: relative;
     padding: 10px;
-    border: 3px solid gray;
     vertical-align: middle;
     alignment: center;
     text-align: center;
@@ -20,12 +19,12 @@ body {
 }
 
 input{
-    font-size: xx-large;
+    font-size: large;
 }
 
 
 button{
-    font-size: xx-large;
+    font-size: large;
 }
 
 div#output{
