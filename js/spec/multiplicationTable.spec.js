@@ -135,15 +135,31 @@ describe("multiplication matrix generator",function () {
     });
 });
 
+
 /**
- * Generate an HTML table to display the values of the two dimensional input array
- * @param matrix
- * @returns {string} html string contains the html table used to display the values of the input array
+ * Generate an HTML table with the values of the input array
+ * @param matrix is a two dimensional array
+ * @returns html string: html table holds the values of the input array
  */
 function printMatrix(matrix) {
     // output variable holds the html structure of the output table
-    var output;
-    output = "<table border='1px' cellspacing='10px' cellpadding='10px' style='padding: 10px; margin-top: 10px'></table>";
+    // color_td holds the cells background color
+    var output, color_td;
+
+    output = "<table border='1px' cellspacing='10px' cellpadding='10px' style='padding: 10px; margin-top: 10px'>";
+    for(var i = 0; i < matrix.length; i++) {
+        output+= "<tr style='height:30px;'>";
+        for(var j = 0; j < matrix[i].length; j++) {
+            // dark background color for marking the top row and the left column
+            if( i == 0 || j==0 )
+                color_td = "#ccc";
+            else
+                color_td = "#fff";
+            output+= "<td style='width:30px;background-color:" + color_td + ";text-align: center;'>" + matrix[i][j] + "</td>";
+        }
+        output+="</tr>";
+    }
+    output+= "</table>";
     return output;
 }
 
