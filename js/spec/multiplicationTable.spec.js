@@ -147,16 +147,46 @@ function printMatrix(matrix) {
     return output;
 }
 
-
 describe("multiplication matrix print functionality",function () {
     it("should be defined", function () {
-        var matrix;
+        var matrix =[[]];
         expect(printMatrix(matrix)).toBeDefined;
     });
 
-    it("return a valid html table", function () {
-        var matrix;
+    it("return a valid html", function () {
+        var matrix=[[]];
         expect(printMatrix(matrix)).toBeHtmlString();
+    });
+
+    it("return an html table that hold the values of the input array", function () {
+        var matrix = [ ['*',2,3,5], [2,4,6,10], [3,6,9,15], [5,10,15,25] ];
+        var output = printMatrix(matrix);
+
+        // parsing the output
+        var parser = new DOMParser();
+        var doc = parser.parseFromString(output, "text/html");
+        var tds = doc.querySelectorAll('td');
+
+        // store the parsed values
+        var values = [];
+        for(var i=0;i<tds.length;i++){
+            values[i] = tds[i].innerHTML;
+        }
+
+        // convert the 2d input array to 1d
+        var matrixStr = [];
+        for(var i = 0; i < matrix.length; i++)
+        {
+            matrixStr = matrixStr.concat(matrix[i]);
+        }
+
+        // the number of the parsed values equal the number of the elements in the input array
+        expect(matrixStr.length).toEqual(values.length);
+
+        // the parsed values match the values in the input array
+        for(var i=0;i<tds.length;i++){
+            expect(values[i]).toEqual(matrixStr[i].toString());
+        }
     });
 
 });
