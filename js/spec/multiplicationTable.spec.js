@@ -4,17 +4,29 @@
 
 
 /**
- * Method that takes an input Array of the size n
+ * Method that takes an Array of the size n and returns a two dimensional Array of the size [n+1][n+1]
  * @param arr is an Array of the size n
+ * @returns {Array} of the size [n+1][n+1]
  */
 function generateMultiplicationMatrix(arr){
 
+    // Create variable n that holds the length of the input array
+    var n = arr.length;
 
+    // Create matrix Array, a multi dimensional Array of the size [n+1][n+1]
+    var matrix = new Array(n+1);
+    for (var i = 0; i < n+1; i++) {
+        matrix[i] = new Array(n+1);
+    }
+
+    return matrix;
 }
+
 
 describe("multiplication matrix generator",function () {
     it("should be defined", function () {
-        expect(generateMultiplicationMatrix()).toBeDefined;
+        var arr = [];
+        expect(generateMultiplicationMatrix(arr)).toBeDefined;
     });
 
     it("takes an Array of the size n and returns a two dimensional Array of the size [n+1][n+1]", function () {
@@ -41,7 +53,6 @@ describe("multiplication matrix generator",function () {
         var w = m[0].length;
         expect(l).toEqual(w);
         expect(l).toEqual(n+1);
-
     });
 });
 
