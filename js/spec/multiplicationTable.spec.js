@@ -40,7 +40,6 @@ function generateMultiplicationMatrix(arr){
     return matrix;
 }
 
-
 describe("multiplication matrix generator",function () {
     it("should be defined", function () {
         var arr = [];
@@ -135,6 +134,16 @@ describe("multiplication matrix generator",function () {
         }
     });
 });
+
+
+/**
+ * Generate an HTML table to display the values of the two dimensional input array
+ * @param matrix
+ * @returns {string}
+ */
+function printMatrix(matrix) {
+    return "";
+}
 
 describe("multiplication matrix print functionality",function () {
     it("should be defined", function () {
