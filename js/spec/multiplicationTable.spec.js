@@ -136,3 +136,9 @@ describe("multiplication matrix generator",function () {
     });
 });
 
+describe("multiplication matrix print functionality",function () {
+    it("should be defined", function () {
+        var matrix;
+        expect(printMatrix(matrix)).toBeDefined;
+    });
+});
