@@ -27,3 +27,12 @@ input{
 button{
     font-size: xx-large;
 }
+
+div#output{
+    position: relative;
+    align-content: center;
+    padding: 10px;
+    text-align: center;
+    display: table;
+    margin: 0 auto;
+}
