@@ -74,7 +74,7 @@ describe("multiplication matrix generator",function () {
     });
 
     it("returns the multiplication matrix for the input array", function () {
-        var arr1 = [1,2];
+        var arr1 = [5,4,3,2,1];
         var matrix = generateMultiplicationMatrix(arr1);
         var n = matrix.length;
         for(var i = 0; i < n; i++) {
@@ -83,17 +83,16 @@ describe("multiplication matrix generator",function () {
                     expect(matrix[i][j]).toEqual("*");
                 }
                 else if (i == 0 && j != 0) {
-                    expect(matrix[i][j]).toEqual(arr1[j]);
+                    expect(matrix[i][j]).toEqual(arr1[j-1]);
                 }
                 else if (j == 0 && i != 0) {
-                    expect(matrix[i][j]).toEqual(arr1[i]);
+                    expect(matrix[i][j]).toEqual(arr1[i-1]);
                 }
                 else {
-                    expect(matrix[i][j]).toEqual(arr1[i] * arr1[j]);
+                    expect(matrix[i][j]).toEqual(arr1[i-1] * arr1[j-1]);
                 }
             }
         }
-
 
         var arr2 = [1,2,3,4,5,6,7,8,9,10];
         var matrix2 = generateMultiplicationMatrix(arr2);
@@ -104,13 +103,13 @@ describe("multiplication matrix generator",function () {
                     expect(matrix2[i][j]).toEqual("*");
                 }
                 else if (i == 0 && j != 0) {
-                    expect(matrix2[i][j]).toEqual(arr2[j]);
+                    expect(matrix2[i][j]).toEqual(arr2[j-1]);
                 }
                 else if (j == 0 && i != 0) {
-                    expect(matrix2[i][j]).toEqual(arr2[i]);
+                    expect(matrix2[i][j]).toEqual(arr2[i-1]);
                 }
                 else {
-                    expect(matrix2[i][j]).toEqual(arr2[i] * arr2[j]);
+                    expect(matrix2[i][j]).toEqual(arr2[i-1] * arr2[j-1]);
                 }
             }
         }
@@ -124,13 +123,13 @@ describe("multiplication matrix generator",function () {
                     expect(matrix3[i][j]).toEqual("*");
                 }
                 else if (i == 0 && j != 0) {
-                    expect(matrix3[i][j]).toEqual(arr3[j]);
+                    expect(matrix3[i][j]).toEqual(arr3[j-1]);
                 }
                 else if (j == 0 && i != 0) {
-                    expect(matrix3[i][j]).toEqual(arr3[i]);
+                    expect(matrix3[i][j]).toEqual(arr3[i-1]);
                 }
                 else {
-                    expect(matrix3[i][j]).toEqual(arr3[i] * arr3[j]);
+                    expect(matrix3[i][j]).toEqual(arr3[i-1] * arr3[j-1]);
                 }
             }
         }
