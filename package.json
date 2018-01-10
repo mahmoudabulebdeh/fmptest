@@ -16,9 +16,14 @@
   "homepage": "https://github.com/mahmoudabulebdeh/fmptest#readme",
   "devDependencies": {
     "jasmine": "^2.8.0",
+    "jasmine-expect": "^3.8.1",
     "karma": "^2.0.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.1",
-    "karma-jasmine": "^1.1.1"
+    "karma-jasmine": "^1.1.1",
+    "karma-jasmine-matchers": "^3.7.0"
   }
+, "unmockedModulePathPatterns": [
+    "jasmine-expect"
+  ]
 }
