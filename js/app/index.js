@@ -1,4 +1,3 @@
-
 /**
  * Created by Mahmoud on 09/01/2018.
  */
@@ -10,15 +9,24 @@ document.getElementById("submit").addEventListener("click", function(){
     input = document.getElementById("numb").value;
 
     // validate user input
-    var validation = validateInput(input);
+    var n = validateInput(input);
 
     // check if the input is valid or invalid and return the respective message
-    if (validation==-1){
-        var message = "'"+ input +"' is not a valid input! Please Enter an Integer number greater or equal to one.";
-        alert(message);
+    if (n==-1){
+        // display a message notifying the user of the invalid input
+        document.getElementById("output").innerHTML =  "'"+ input +"' is not a valid input! Please Enter an Integer number greater or equal to one.";
     } else {
-        var primes = generatePrimes(input);
-        alert("Thanks for the valid input, " +primes.length+ " primes has been generated!");
-        console.log(primes.toString());
+        // generate n primes
+        var primes = generatePrimes(n);
+
+        // generate the multiplication matrix
+        var matrix = generateMultiplicationMatrix(primes);
+
+        // generate the html table that holds the values of the multiplication matrix
+        var matrixHtmlTable = printMatrix(matrix);
+
+        // display the table on the home page
+        document.getElementById("output").innerHTML =  matrixHtmlTable;
     }
 });
+
