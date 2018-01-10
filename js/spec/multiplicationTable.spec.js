@@ -135,7 +135,6 @@ describe("multiplication matrix generator",function () {
     });
 });
 
-
 /**
  * Generate an HTML table to display the values of the two dimensional input array
  * @param matrix
@@ -150,4 +149,10 @@ describe("multiplication matrix print functionality",function () {
         var matrix;
         expect(printMatrix(matrix)).toBeDefined;
     });
+
+    it("return a valid html table", function () {
+        var matrix;
+        expect(printMatrix(matrix)).toBeHtmlString();
+    });
+
 });
