@@ -36,26 +36,7 @@ function generatePrimes(n) {
         x = x+1;
     }
     return primes;
-}
-
-describe("input validation", function() {
-
-    it("should be defined", function() {
-        expect(testApp.validateInput()).toBeDefined;
-    });
-
-    it("returns -1 if not a number", function() {
-        expect(testApp.validateInput("test")).toEqual(-1);
-    });
-
-    it("returns -1 if not an integer", function() {
-        expect(testApp.validateInput(2.2)).toEqual(-1);
-    });
-
-    it("returns -1 if less than one", function() {
-        expect(testApp.validateInput(0)).toEqual(-1);
-    });
-});
+};
 
 describe("prime validator",function () {
     it("should be defined", function() {
