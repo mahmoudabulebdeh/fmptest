@@ -203,6 +203,45 @@ describe("multiplication matrix print functionality",function () {
         for(var i=0;i<tds.length;i++){
             expect(values[i]).toEqual(matrixStr[i].toString());
         }
+
+        // Test for larger array
+        var array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+
+        // generate a double array of the size 21 * 21
+        matrix =  generateMultiplicationMatrix(array);
+
+        // actual output to be tested against expected output
+        output = printMatrix(matrix);
+
+        // parsing the output
+        doc = parser.parseFromString(output, "text/html");
+        tds = doc.querySelectorAll('td');
+
+        // store the parsed values
+        values = [];
+        for(var i=0;i<tds.length;i++){
+            values[i] = tds[i].innerHTML;
+        }
+
+        // convert the 2d input array to 1d
+        matrixStr = [];
+        for(var i = 0; i < matrix.length; i++)
+        {
+            matrixStr = matrixStr.concat(matrix[i]);
+        }
+
+        // the number of the parsed values equal the number of the elements in the input array
+        expect(matrixStr.length).toEqual(values.length);
+
+        // the parsed values match the values in the input array
+        for(var i=0;i<tds.length;i++){
+            expect(values[i]).toEqual(matrixStr[i].toString());
+        }
+
+
     });
+
+
+
 
 });
