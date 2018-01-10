@@ -138,11 +138,15 @@ describe("multiplication matrix generator",function () {
 /**
  * Generate an HTML table to display the values of the two dimensional input array
  * @param matrix
- * @returns {string}
+ * @returns {string} html string contains the html table used to display the values of the input array
  */
 function printMatrix(matrix) {
-    return "";
+    // output variable holds the html structure of the output table
+    var output;
+    output = "<table border='1px' cellspacing='10px' cellpadding='10px' style='padding: 10px; margin-top: 10px'></table>";
+    return output;
 }
+
 
 describe("multiplication matrix print functionality",function () {
     it("should be defined", function () {
