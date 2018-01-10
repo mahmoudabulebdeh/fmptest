@@ -20,10 +20,12 @@
     "karma": "^2.0.0",
     "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.1",
+    "karma-firefox-launcher": "^1.1.0",
     "karma-jasmine": "^1.1.1",
-    "karma-jasmine-matchers": "^3.7.0"
-  }
-, "unmockedModulePathPatterns": [
+    "karma-jasmine-matchers": "^3.7.0",
+    "karma-safari-launcher": "^1.0.0"
+  },
+  "unmockedModulePathPatterns": [
     "jasmine-expect"
   ]
 }

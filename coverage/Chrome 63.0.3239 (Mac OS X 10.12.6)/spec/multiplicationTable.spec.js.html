@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for spec/multiplicationTable.spec.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">spec/</a> multiplicationTable.spec.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>127/127</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>52/52</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>10/10</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>127/127</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">85×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-yes">85×</span>
+<span class="cline-any cline-yes">1291×</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1283×</span>
+<span class="cline-any cline-yes">77×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1206×</span>
+<span class="cline-any cline-yes">77×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1129×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">36×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">30×</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">25×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">11×</span>
+<span class="cline-any cline-yes">121×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">120×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">110×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">100×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-yes">441×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">440×</span>
+<span class="cline-any cline-yes">20×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">420×</span>
+<span class="cline-any cline-yes">20×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">400×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">27×</span>
+<span class="cline-any cline-yes">27×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">457×</span>
+<span class="cline-any cline-yes">48×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">409×</span>
+<span class="cline-any cline-yes">457×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">27×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">16×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">441×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">441×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/**
+ * Created by Mahmoud on 09/01/2018.
+ */
+&nbsp;
+&nbsp;
+/**
+ * Method that takes an Array of the size n and returns a two dimensional Array of the size [n+1][n+1]
+ * @param arr is an Array of the size n
+ * @returns {Array} of the size [n+1][n+1] that represent the multiplication matrix generated by multiplying the input array by itself
+ */
+function generateMultiplicationMatrix(arr){
+&nbsp;
+    // Create variable n that holds the length of the input array
+    var n = arr.length;
+&nbsp;
+    // Create matrix Array, a multi dimensional Array of the size [n+1][n+1]
+    var matrix = new Array(n+1);
+    for (var i = 0; i &lt; n+1; i++) {
+        matrix[i] = new Array(n+1);
+    }
+&nbsp;
+    // Set the values of the multiplication matrix
+    // The top row and left column hold the values from the input array
+    for(var i = -1; i &lt; n; i++) {
+        for(var j = -1; j &lt; n; j++) {
+            if( i == -1 &amp;&amp; j==-1 ) {
+                matrix[i+1][j+1]= "*";
+            }
+            else if( i == -1 &amp;&amp; j!=-1 ) {
+                matrix[i+1][j+1]= arr[j];
+            }
+            else if(j==-1 &amp;&amp; i!=-1) {
+                matrix[i+1][j+1]= arr[i];
+            }
+            else {
+                matrix[i+1][j+1] = arr[i] * arr[j];
+            }
+        }
+    }
+    return matrix;
+}
+&nbsp;
+describe("multiplication matrix generator",function () {
+    it("should be defined", function () {
+        var arr = [];
+        expect(generateMultiplicationMatrix(arr)).toBeDefined;
+    });
+&nbsp;
+    it("takes an Array of the size n and returns a two dimensional Array of the size [n+1][n+1]", function () {
+        var arr1 = [1,2];
+        var n = arr1.length;
+        var m = generateMultiplicationMatrix(arr1);
+        var l = m.length;
+        var w = m[0].length;
+        expect(l).toEqual(w);
+        expect(l).toEqual(n+1);
+&nbsp;
+        var arr2 = [1,2,3,4,5,6,7,8,9,10];
+        var n = arr2.length;
+        var m = generateMultiplicationMatrix(arr2);
+        var l = m.length;
+        var w = m[0].length;
+        expect(l).toEqual(w);
+        expect(l).toEqual(n+1);
+&nbsp;
+        var arr3 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+        var n = arr2.length;
+        var m = generateMultiplicationMatrix(arr2);
+        var l = m.length;
+        var w = m[0].length;
+        expect(l).toEqual(w);
+        expect(l).toEqual(n+1);
+    });
+&nbsp;
+    it("returns the multiplication matrix for the input array", function () {
+        var arr1 = [5,4,3,2,1];
+        var matrix = generateMultiplicationMatrix(arr1);
+        var n = matrix.length;
+        for(var i = 0; i &lt; n; i++) {
+            for (var j = 0; j &lt; n; j++) {
+                if (i == 0 &amp;&amp; j == 0) {
+                    expect(matrix[i][j]).toEqual("*");
+                }
+                else if (i == 0 &amp;&amp; j != 0) {
+                    expect(matrix[i][j]).toEqual(arr1[j-1]);
+                }
+                else if (j == 0 &amp;&amp; i != 0) {
+                    expect(matrix[i][j]).toEqual(arr1[i-1]);
+                }
+                else {
+                    expect(matrix[i][j]).toEqual(arr1[i-1] * arr1[j-1]);
+                }
+            }
+        }
+&nbsp;
+        var arr2 = [1,2,3,4,5,6,7,8,9,10];
+        var matrix2 = generateMultiplicationMatrix(arr2);
+        var n = matrix2.length;
+        for(var i = 0; i &lt; n; i++) {
+            for (var j = 0; j &lt; n; j++) {
+                if (i == 0 &amp;&amp; j == 0) {
+                    expect(matrix2[i][j]).toEqual("*");
+                }
+                else if (i == 0 &amp;&amp; j != 0) {
+                    expect(matrix2[i][j]).toEqual(arr2[j-1]);
+                }
+                else if (j == 0 &amp;&amp; i != 0) {
+                    expect(matrix2[i][j]).toEqual(arr2[i-1]);
+                }
+                else {
+                    expect(matrix2[i][j]).toEqual(arr2[i-1] * arr2[j-1]);
+                }
+            }
+        }
+&nbsp;
+        var arr3 = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+        var matrix3 = generateMultiplicationMatrix(arr3);
+        var n = matrix3.length;
+        for(var i = 0; i &lt; n; i++) {
+            for (var j = 0; j &lt; n; j++) {
+                if (i == 0 &amp;&amp; j == 0) {
+                    expect(matrix3[i][j]).toEqual("*");
+                }
+                else if (i == 0 &amp;&amp; j != 0) {
+                    expect(matrix3[i][j]).toEqual(arr3[j-1]);
+                }
+                else if (j == 0 &amp;&amp; i != 0) {
+                    expect(matrix3[i][j]).toEqual(arr3[i-1]);
+                }
+                else {
+                    expect(matrix3[i][j]).toEqual(arr3[i-1] * arr3[j-1]);
+                }
+            }
+        }
+    });
+});
+&nbsp;
+&nbsp;
+/**
+ * Generate an HTML table with the values of the input array
+ * @param matrix is a two dimensional array
+ * @returns html string: html table holds the values of the input array
+ */
+function printMatrix(matrix) {
+    // output variable holds the html structure of the output table
+    // color_td holds the cells background color
+    var output, color_td;
+&nbsp;
+    output = "&lt;table border='1px' cellspacing='10px' cellpadding='10px' style='padding: 10px; margin-top: 10px'&gt;";
+    for(var i = 0; i &lt; matrix.length; i++) {
+        output+= "&lt;tr style='height:30px;'&gt;";
+        for(var j = 0; j &lt; matrix[i].length; j++) {
+            // dark background color for marking the top row and the left column
+            if( i == 0 || j==0 )
+                color_td = "#ccc";
+            else
+                color_td = "#fff";
+            output+= "&lt;td style='width:30px;background-color:" + color_td + ";text-align: center;'&gt;" + matrix[i][j] + "&lt;/td&gt;";
+        }
+        output+="&lt;/tr&gt;";
+    }
+    output+= "&lt;/table&gt;";
+    return output;
+}
+&nbsp;
+describe("multiplication matrix print functionality",function () {
+    it("should be defined", function () {
+        var matrix =[[]];
+        expect(printMatrix(matrix)).toBeDefined;
+    });
+&nbsp;
+    it("return a valid html", function () {
+        var matrix=[[]];
+        expect(printMatrix(matrix)).toBeHtmlString();
+    });
+&nbsp;
+    it("return an html table that hold the values of the input array", function () {
+        var matrix = [ ['*',2,3,5], [2,4,6,10], [3,6,9,15], [5,10,15,25] ];
+        var output = printMatrix(matrix);
+&nbsp;
+        // parsing the output
+        var parser = new DOMParser();
+        var doc = parser.parseFromString(output, "text/html");
+        var tds = doc.querySelectorAll('td');
+&nbsp;
+        // store the parsed values
+        var values = [];
+        for(var i=0;i&lt;tds.length;i++){
+            values[i] = tds[i].innerHTML;
+        }
+&nbsp;
+        // convert the 2d input array to 1d
+        var matrixStr = [];
+        for(var i = 0; i &lt; matrix.length; i++)
+        {
+            matrixStr = matrixStr.concat(matrix[i]);
+        }
+&nbsp;
+        // the number of the parsed values equal the number of the elements in the input array
+        expect(matrixStr.length).toEqual(values.length);
+&nbsp;
+        // the parsed values match the values in the input array
+        for(var i=0;i&lt;tds.length;i++){
+            expect(values[i]).toEqual(matrixStr[i].toString());
+        }
+&nbsp;
+        // Test for larger array
+        var array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
+&nbsp;
+        // generate a double array of the size 21 * 21
+        matrix =  generateMultiplicationMatrix(array);
+&nbsp;
+        // actual output to be tested against expected output
+        output = printMatrix(matrix);
+&nbsp;
+        // parsing the output
+        doc = parser.parseFromString(output, "text/html");
+        tds = doc.querySelectorAll('td');
+&nbsp;
+        // store the parsed values
+        values = [];
+        for(var i=0;i&lt;tds.length;i++){
+            values[i] = tds[i].innerHTML;
+        }
+&nbsp;
+        // convert the 2d input array to 1d
+        matrixStr = [];
+        for(var i = 0; i &lt; matrix.length; i++)
+        {
+            matrixStr = matrixStr.concat(matrix[i]);
+        }
+&nbsp;
+        // the number of the parsed values equal the number of the elements in the input array
+        expect(matrixStr.length).toEqual(values.length);
+&nbsp;
+        // the parsed values match the values in the input array
+        for(var i=0;i&lt;tds.length;i++){
+            expect(values[i]).toEqual(matrixStr[i].toString());
+        }
+&nbsp;
+&nbsp;
+    });
+&nbsp;
+&nbsp;
+&nbsp;
+&nbsp;
+});
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Jan 10 2018 17:26:45 GMT+0000 (GMT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
