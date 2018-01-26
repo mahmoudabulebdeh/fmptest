@@ -49,7 +49,7 @@ function printMatrix(matrix) {
     // color_td holds the cells background color
     var output, color_td;
 
-    output = "<table border='1px' cellspacing='10px' cellpadding='10px' style='padding: 10px; margin-top: 10px'>";
+    output = "<table border='1px' cellspacing='10px' cellpadding='10px' style='padding: 10px; margin-top: 10px' width='100%'>";
     for(var i = 0; i < matrix.length; i++) {
         output+= "<tr style='height:30px;'>";
         for(var j = 0; j < matrix[i].length; j++) {
