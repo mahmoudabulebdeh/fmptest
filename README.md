@@ -15,7 +15,7 @@ In order to run the application you can open the online version available on thi
 
 The other option to run the application is to download the source code on your local web server environment. The home page is the index.html page in the root folder.
 
-# What I'm pleased with:
+# TDD:
 
 Having previously read and studied test driven development (TDD), I can say that I am pleased that I have had the chance to implement it within the process.
 TDD, is a useful software development process, as it guarantees the programme to pass the test from the start as well as continuously testing it throughout the process. Additionally, this can help in reducing costs, shortening testing cycles and achieve continuous feedback on quality.
