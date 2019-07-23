@@ -11,7 +11,7 @@ The user interface is the index.html located in the root folder. The source code
 
 # How To Run:
 
-In order to run the application you can open the online version available on this link  https://mahmoudabulebdeh.github.io/multiplicationTable/ using any web browser. The application has been tested on Mac OS X 10.12.6 and should be running error free on Safari 11.0.2, Mozilla FireFox 57.0.0 and Chrome 63.0.32.
+In order to run the application you can open the online version available on this link  https://mahmoudabulebdeh.github.io/prime-multiplication-table/ using any web browser. The application has been tested on Mac OS X 10.12.6 and should be running error free on Safari 11.0.2, Mozilla FireFox 57.0.0 and Chrome 63.0.32.
 
 The other option to run the application is to download the source code on your local web server environment. The home page is the index.html page in the root folder.
 
